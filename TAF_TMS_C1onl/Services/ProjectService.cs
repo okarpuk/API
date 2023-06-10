@@ -10,7 +10,8 @@ namespace TAF_TMS_C1onl.Services;
 public class ProjectService : BaseService
 {
     public static readonly string GET_PROJECT = "index.php?/api/v2/get_project/{project_id}";
-    
+    public static readonly string DELETE_PROJECT = "index.php?/api/v2/delete_project/{project_id}";
+
     public ProjectService(ApiClient apiClient) : base(apiClient)
     {
     }
@@ -56,15 +57,16 @@ public class ProjectService : BaseService
         return _apiClient.ExecuteAsync<Project>(request);
     }
 
+    public RestResponse DeleteProject(string projectId)
+    {
+        var request = new RestRequest(DELETE_PROJECT)
+            .AddUrlSegment("project_id", projectId);
+
+        return _apiClient.Execute(request);
+    }
+
     public RestResponse UpdateProject(string projectId, Project project)
     {
         return null;
     }
-
-    public RestResponse DeleteProject(string projectId)
-    {
-        return null;
-    }
-    
-    
 }
