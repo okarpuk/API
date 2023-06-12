@@ -33,9 +33,7 @@ namespace TAF_TMS_C1onl.Tests.API
         public void GetCaseTest()
         {
             var actualCase = _caseService.GetCase(testCaseId);
-
             var jsonObject = JObject.Parse(actualCase.Content);
-
             int actualId = jsonObject.SelectToken("$.id").Value<int>();
 
             Assert.That(actualId, Is.EqualTo(testCaseId));
@@ -47,9 +45,7 @@ namespace TAF_TMS_C1onl.Tests.API
             var expectedCase = new Case();
             expectedCase.Title = "Updated Oleg's case";
             expectedCase.SectionId = 2;
-
             var actualCase = _caseService.UpdateCase(expectedCase, testCaseId);
-
             var jsonObject = JObject.Parse(actualCase.Content);
 
             string actualTitle = jsonObject.SelectToken("$.title").Value<string>();

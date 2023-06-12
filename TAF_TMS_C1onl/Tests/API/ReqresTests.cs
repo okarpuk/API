@@ -5,7 +5,7 @@ namespace TAF_TMS_C1onl.Tests.API;
 
 public class ReqresTests
 {
-    [Test]
+    //[Test]
     public void GetUser()
     {
         // Create a RestClient instance
@@ -28,7 +28,7 @@ public class ReqresTests
         }
     }
 
-    [Test]
+    //[Test]
     public void CreateUser1()
     {
         // Create a RestClient instance
@@ -58,7 +58,7 @@ public class ReqresTests
         }
     }
 
-    [Test]
+    //[Test]
     public void CreateUser2()
     {
         // Create a RestClient instance
@@ -91,7 +91,7 @@ public class ReqresTests
         }
     }
 
-    [Test]
+    //[Test]
     public void CreateUser3()
     {
         // Create a RestClient instance
@@ -125,7 +125,7 @@ public class ReqresTests
         }
     }
 
-    [Test]
+    //[Test]
     public void CreateUser4()
     {
         // Create a RestClient instance

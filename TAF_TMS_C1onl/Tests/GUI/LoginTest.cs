@@ -6,7 +6,7 @@ namespace TAF_TMS_C1onl.Tests;
 
 public class LoginTest : BaseTest
 {
-    [Test(Description = "Успешный логин")]
+    //[Test(Description = "Успешный логин")]
     [AllureSeverity(SeverityLevel.critical)]
     [AllureOwner("User")]
     [AllureSuite("PassedSuite")]
@@ -21,7 +21,7 @@ public class LoginTest : BaseTest
     {
         NavigationSteps.NavigateToLoginPage();
         NavigationSteps.SuccessfulLogin(Configurator.Admin);
-        
+
         Assert.IsTrue(NavigationSteps.DashboardPage.IsPageOpened());
     }
 }

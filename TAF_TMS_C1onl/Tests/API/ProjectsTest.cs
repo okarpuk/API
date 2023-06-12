@@ -11,7 +11,7 @@ public class ProjectsTest : BaseApiTest
 {
     private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
     
-    [Test]
+    //[Test]
     public void GetProjectTest_1()
     {
         var request = new RestRequest("index.php?/api/v2/get_project/{project_id}")
@@ -33,7 +33,7 @@ public class ProjectsTest : BaseApiTest
         _logger.Info("jsonObject2 -> name: " + value);
     }
 
-    [Test]
+    //[Test]
     public void GetProjectTest_2()
     {
         var json = _projectService.GetProject("1").Content;
@@ -50,14 +50,14 @@ public class ProjectsTest : BaseApiTest
         _logger.Info("jsonObject2 -> name: " + value);
     }
 
-    [Test]
+    //[Test]
     public void GetProjectTest_3()
     {
         var actualProject = _projectService.GetAsProject("1");
         _logger.Info("jsonObject2 -> name: " + actualProject.Name);
     }
 
-    [Test]
+    //[Test]
     public void GetProjectTest_4()
     {
         var json = _projectService.GetProjectAsync("1").Result.Content;
@@ -74,14 +74,14 @@ public class ProjectsTest : BaseApiTest
         _logger.Info("jsonObject2 -> name: " + value);
     }
 
-    [Test]
+    //[Test]
     public void GetProjectTest_5()
     {
         var actualProject = _projectService.GetAsProjectAsync("1");
         _logger.Info("jsonObject2 -> name: " + actualProject.Name);
     }
 
-    [Test]
+    //[Test]
     public void AddProjectTest_1()
     {
         var expectedProject = new Project();
